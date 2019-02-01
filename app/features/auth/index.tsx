@@ -4,7 +4,7 @@ import {actionCheckIsLoggedIn} from "./actionAuth";
 import {connect} from "react-redux";
 import IState from "../../config/IState";
 import {selectAuthInfo} from "./selectAuthInfo";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import "./style/auth.css";
 
 interface ISignupState {
@@ -15,13 +15,14 @@ interface ISignupDispatch {
     onLoadCheckLogin: () => Action<any>
 }
 
-interface ISignupProps extends ISignupState, ISignupDispatch {};
+interface ISignupProps extends ISignupState, ISignupDispatch {}
 
 class _Auth extends React.PureComponent<ISignupProps> {
     public render (){
         const props = this.props;
         return (
             <div>
+                Favorite Food: <FontAwesomeIcon icon="igloo" />
                 <h4>Is logged in? : {props.status.toString()}</h4>
                 <button onClick={props.onLoadCheckLogin}>Login please</button>
             </div>
@@ -31,10 +32,10 @@ class _Auth extends React.PureComponent<ISignupProps> {
 
 const mapState = (state: IState) => ({
     status: selectAuthInfo(state)
-})
+});
 
 const mapDispatch = (dispatch: Dispatch) => ({
     onLoadCheckLogin: () => dispatch(actionCheckIsLoggedIn())
-})
+});
 
 export default connect(mapState, mapDispatch)(_Auth);
