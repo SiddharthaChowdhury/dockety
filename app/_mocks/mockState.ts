@@ -1,11 +1,16 @@
 import IState from "../setup/IState";
-import {IdLocaLanguage} from "../loca/IdLocaLanguage";
+import {IdLocaType} from "../loca/IdLocaType";
 
 const mockState: IState = {
     authInfo: {
         status: false
     },
-    loca: IdLocaLanguage.en
+    userInfo: {
+        id: "1",
+        name: "Siddhartha Chowdhury",
+        email: "siddharthac6@gmail.com",
+        loca: IdLocaType.en,
+    }
 };
 
 export default mockState;
