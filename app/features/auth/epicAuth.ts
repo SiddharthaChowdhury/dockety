@@ -5,6 +5,7 @@ import IState from "../../setup/IState";
 
 import {switchMap} from 'rxjs/operators';
 import {from, Observable} from "rxjs";
+import {actionUserInfoFetch} from "../user-info/actionUserInfo";
 
 export const epicCheckLogin: Epic<Action, Action, IState> = (action$, state$ ): Observable<any> =>
     action$.pipe(
@@ -15,6 +16,7 @@ export const epicCheckLogin: Epic<Action, Action, IState> = (action$, state$ ): 
 
                 const actions: Action[] = [
                     actionSetIsLoggedIn(true),
+                    actionUserInfoFetch("1"),
                 ];
 
                 return from(actions);
