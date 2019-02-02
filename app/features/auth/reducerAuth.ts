@@ -7,7 +7,7 @@ const initialState: IAuthInfo = {
 
 export default (state:IAuthInfo = initialState, action: IActionAuth) => {
     switch(action.type) {
-        case TypeActionAuth.setLogin:
+        case TypeActionAuth.authComplete:
             return Object.assign(
                 {},
                 state,

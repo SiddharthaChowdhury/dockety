@@ -1,0 +1,18 @@
+{
+  "dockety": "Dockety",
+  "loading": "Loading application {0}%",
+  "connection_error": "Please check your internet connection!",
+  "signup_button": "Create account",
+  "login_button": "Login",
+  "remember_me": "Remember me",
+  "signup_agreement": "By signing up you agree to our {0} and {1}",
+  "lorem_ipsum": "Lorem ipsum dolor sit amet, vix no euismod habemus, vim ad omnes veniam, vis duis populo forensibus an. Ut sed ipsum detraxit, ut ius dicam consectetuer, paulo viris persecuti per no. In usu prima posse essent, usu in quas solet nostro. Ea altera expetenda eum, quot appareat corrumpit quo an, his quem harum qualisque ne. Id quis integre prodesset has, nostrud deserunt nam ne, pri appetere atomorum id.",
+  "new_page": "New page",
+  "home": "Home",
+  "profile": "Profile",
+  "account": "Account",
+  "forgot_password": "Forgot password?",
+  "reset_password": "Reset password",
+  "new_book": "New book",
+  "new_book_info": "\"New Book\" - is basically a new container, inside which you start creating \"Pages\" or \"topics\""
+}

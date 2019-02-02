@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Action, Dispatch} from "redux";
 import {actionCheckIsLoggedIn} from "./actionAuth";
 import {connect} from "react-redux";
-import IState from "../../config/IState";
+import IState from "../../setup/IState";
 import {selectAuthInfo} from "./selectAuthInfo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import "./style/auth.css";

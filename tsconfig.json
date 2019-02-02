@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
+        "types": "node",
         "sourceMap": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
@@ -14,9 +15,11 @@
         "jsx": "react",
         "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
-        "noImplicitReturns": true,
+        "noImplicitReturns": true
     },
     "exclude": [
         "**/node_modules/*",
+        "**/dist/*",
+        "**/scripts/*"
     ]
 }

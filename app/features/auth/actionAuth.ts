@@ -2,7 +2,7 @@ import {Action} from "redux";
 
 export const enum TypeActionAuth {
     checkLogin = "AuthInfo > checkLogin",
-    setLogin = "AuthInfo > setLogin",
+    authComplete = "AuthInfo > authComplete",
 };
 
 export interface IActionAuth extends Action {
@@ -15,6 +15,6 @@ export const actionCheckIsLoggedIn = (): IActionAuth => ({
 });
 
 export const actionSetIsLoggedIn = (status: boolean): IActionAuth => ({
-    type: TypeActionAuth.setLogin,
+    type: TypeActionAuth.authComplete,
     status
 });

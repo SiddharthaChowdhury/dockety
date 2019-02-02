@@ -1,5 +1,5 @@
 import * as React from "react";
-import IState from "../../../config/IState";
+import IState from "../../../setup/IState";
 import {Dispatch} from "redux";
 import {connect} from "react-redux";
 
