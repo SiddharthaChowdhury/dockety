@@ -4,7 +4,7 @@ import IState from "../../setup/IState";
 import {from, Observable} from "rxjs";
 import {actionUserInfoComplete, actionUserInfoUpdate, IActionUserInfo, TypeActionUserInfo} from "./actionUserInfo";
 import {switchMap} from "rxjs/operators";
-import {IdLocaType} from "../../loca/IdLocaType";
+import mockState from "../../_mocks/mockState";
 
 export const epicUserInfo: Epic<Action, Action, IState> = (action$, state$ ): Observable<any> =>
     action$.pipe(
@@ -13,12 +13,7 @@ export const epicUserInfo: Epic<Action, Action, IState> = (action$, state$ ): Ob
             // const {userIdentity} = action;
 
             // make API request to fetch user Info
-            return from([actionUserInfoUpdate({
-                id: "1",
-                name: "Siddhartha Chowdhury",
-                email: "siddharthac_and_can_be_bigger6@gmail.com",
-                loca: IdLocaType.en,
-            }),
+            return from([actionUserInfoUpdate(mockState.userInfo),
                 actionUserInfoComplete()
             ])
         })

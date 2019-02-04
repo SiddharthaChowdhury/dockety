@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import "./style/auth.css";
 
 interface ISignupState {
+    state: IState;
     status: boolean
 }
 
@@ -19,6 +20,7 @@ interface ISignupProps extends ISignupState, ISignupDispatch {}
 
 class _Auth extends React.PureComponent<ISignupProps> {
     public render (){
+        console.log("State", this.props.state);
         const props = this.props;
         return (
             <div>
@@ -31,6 +33,7 @@ class _Auth extends React.PureComponent<ISignupProps> {
 }
 
 const mapState = (state: IState) => ({
+    state: state,
     status: selectAuthInfo(state)
 });
 
